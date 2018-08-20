@@ -4,6 +4,7 @@ package collectlinks
 
 import (
 	"io"
+    "fmt"
 
 	"golang.org/x/net/html"
 )
@@ -13,6 +14,9 @@ import (
 // anchor links found in the provided html.
 // It does not close the reader passed to it.
 func All(httpBody io.Reader) []string {
+    fmt.Println("============================================")
+    fmt.Println("Printing from collectlinks fork.")
+    fmt.Println("============================================")
 	links := []string{}
 	col := []string{}
 	page := html.NewTokenizer(httpBody)
